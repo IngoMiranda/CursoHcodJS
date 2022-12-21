@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="bg">
+        <div class="calculator">
+            <div class="display">
+               
+                <div class="display01">
+                    <div class="res" id="res">
+                        <div class="time">
+                            <p class="date" id="date"></p>
+                            <p class="hour" id = "hour"></p>
+                        </div>
+                       <p class="saw" id="display"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="keys">
+                <div class="row1">
+                    <button class="off-on" id="off-on">OFF</button>
+                    <button class="correct" id="correct">C</button>
+                    <button class="share signal" id="share">/</button>
+                    <button class="multi signal" id="multi">*</button>
+                </div>
+                <div class="row1">
+                    <button class="seven number" id="seven">7</button>
+                    <button class="eight number" id="eight">8</button>
+                    <button class="nine number" id="nine">9</button>
+                    <button class="anyLess signal" id="anyLess">-</button>
+                </div>
+                <div class="row1">
+                    <button class="four number" id="four">4</button>
+                    <button class="five number" id="five">5</button>
+                    <button class="six number" id="six">6</button>
+                    <button class="most signal" id="most">+</button>
+                </div>
+                <div class="row1">
+                    <button class="one number" id="one">1</button>
+                    <button class="two number" id="tow">2</button>
+                    <button class="three number" id="three">3</button>
+                    <button class="percent signal" id="percent">%</button>
+                </div>
+                <div class="row1">
+                    <button class="zero number" id="zero">0</button>
+                    <button class="score signal" id="score">.</button>
+                    <button class="equal" id="equal">=</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/controller.js"></script>
+    <script src = "./scripts/calc.js"></script>
+    
+</body>
+</html>
