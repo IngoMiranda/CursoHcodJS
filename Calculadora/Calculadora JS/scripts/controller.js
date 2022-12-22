@@ -23,8 +23,9 @@ class CalcController{
 
     initializeButtonsEvents(){
 
-        let buttons = document.querySelectorAll("#keys > div");
-
+        let buttons = document.querySelectorAll(".keys [id]");
+        
+        console.log("arrey", buttons)
         buttons.forEach(btn =>{
 
             addEventListener("click", e=> {
