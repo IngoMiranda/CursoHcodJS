@@ -7,6 +7,7 @@ class CalcController{
         this._hourEl = document.querySelector('#hour');
         this._currentDate; 
         this.initialize();
+        this.initializeButtonsEvents();
     }
 
     initialize(){
@@ -18,6 +19,20 @@ class CalcController{
 
         }, 1000);
 
+    }
+
+    initializeButtonsEvents(){
+
+        let buttons = document.querySelectorAll("#keys > div");
+
+        buttons.forEach(btn =>{
+
+            addEventListener("click", e=> {
+                console.log(e)
+    
+            });
+    
+        });
     }
 
     setDisplayDateTime(){
