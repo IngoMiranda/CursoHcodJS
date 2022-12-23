@@ -39,6 +39,10 @@ class CalcController{
                 console.log(btn.className.replace('btn-','')
     
             });
+
+            this.addEventListenerAll(btn, "mouseover mouseup mousedow", e =>{
+                
+            })
     
         });
     }
