@@ -21,6 +21,13 @@ class CalcController{
 
     }
 
+    addEventListenerAll(element, events, fn){
+
+        events.split (' ').forEach(event =>{
+            element.addEventListener(event, fn, false);
+        });
+    }
+
     initializeButtonsEvents(){
 
         let buttons = document.querySelectorAll("#keys > div > button");
@@ -28,9 +35,8 @@ class CalcController{
         
         buttons.forEach((btn, index) =>{
 
-            btn.addEventListener("click", e => {
-
-                console.log(btn.className.replace('btn-',''))
+            this.addEventListenerAll("click drag", e =>{
+                console.log(btn.className.replace('btn-','')
     
             });
     
