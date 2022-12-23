@@ -23,14 +23,14 @@ class CalcController{
 
     initializeButtonsEvents(){
 
-        let buttons = document.querySelectorAll("#keys, div > .btn");
+        let buttons = document.querySelectorAll("#keys > div > button");
         
         
-        buttons.forEach(btn =>{
+        buttons.forEach((btn, index) =>{
 
-            addEventListener("click", e=> {
+            btn.addEventListener("click", e => {
 
-                console.log(e)
+                console.log(btn.className.replace('btn-',''))
     
             });
     
