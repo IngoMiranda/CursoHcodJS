@@ -1,6 +1,6 @@
 class CalcController{
     constructor(){
-
+        this._operation = [];
         this._locale = 'pt-Br';
         this._displayCalcEl = document.querySelector('#display');
         this._dateEl = document.querySelector('#date');
@@ -8,6 +8,7 @@ class CalcController{
         this._currentDate; 
         this.initialize();
         this.initializeButtonsEvents();
+        // this.execBtn();
     }
 
     initialize(){
@@ -18,6 +19,28 @@ class CalcController{
             this.setDisplayDateTime();
 
         }, 1000);
+
+    }
+
+
+    clearAll(){
+
+
+
+
+    }
+    execBtn(value){
+
+        switch (value){
+
+            case 'offOn':
+                this.clearAll();
+                break;
+            case 'C':
+                this.clearAll();
+                break;
+        }
+
 
     }
 
@@ -35,14 +58,17 @@ class CalcController{
         
         buttons.forEach((btn, index) =>{
 
-            this.addEventListenerAll("click drag", e =>{
-                console.log(btn.className.replace('btn-','')
-    
+            this.addEventListenerAll(btn,"click drag", e =>{ 
+
+               let textBtn = btn.className.replace("btn-", "");
+               this.execBtn(textBtn);
+               
             });
 
             this.addEventListenerAll(btn, "mouseover mouseup mousedow", e =>{
                 
-            })
+                btn.style.cursor = "pointer";
+            });
     
         });
     }
