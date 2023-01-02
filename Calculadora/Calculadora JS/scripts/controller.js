@@ -29,12 +29,20 @@ class CalcController{
 
 
     }
+
+    OffOn(){
+
+        
+
+    }
+
+
     execBtn(value){
 
         switch (value){
 
             case 'offOn':
-                this.clearAll();
+                this.offOn();
                 break;
             case 'C':
                 this.clearAll();
