@@ -8,7 +8,7 @@ class CalcController{
         this._currentDate; 
         this.initialize();
         this.initializeButtonsEvents();
-        // this.execBtn();
+        
     }
 
     initialize(){
@@ -26,13 +26,27 @@ class CalcController{
     clearAll(){
 
 
-
+        this._operation.pop();
 
     }
 
-    OffOn(){
+    offOn(){
 
-        
+        this._operation = [];
+
+    }
+
+    addOperation(value){
+    
+        this._operation.push(value);
+
+        console.log(this._operation);
+
+    }
+
+    setError(){
+
+        this.displayCalc = "Error"
 
     }
 
@@ -44,10 +58,51 @@ class CalcController{
             case 'offOn':
                 this.offOn();
                 break;
-            case 'C':
+
+            case 'correction':
                 this.clearAll();
                 break;
+            case 'division':
+                
+                break;
+            case 'multiplication':
+                
+                break;
+             case 'anyless':
+                
+                break;
+            case 'most':
+                
+                break;
+            case 'equal':
+                
+                break;
+            case 'score':
+                
+                break;
+            case 'percent':
+                
+                break;
+
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6': 
+            case '7':
+            case '8':
+            case '9':
+                this.addOperation(Number(value));
+                break;
+            default:
+                this.setError();
+                break;
+
         }
+        
+
 
 
     }
@@ -68,8 +123,8 @@ class CalcController{
 
             this.addEventListenerAll(btn,"click drag", e =>{ 
 
-               let textBtn = btn.className.replace("btn-", "");
-               this.execBtn(textBtn);
+                let textBtn = btn.className.replace("btn-", "");
+                this.execBtn(textBtn);
                
             });
 
